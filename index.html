@@ -1,0 +1,142 @@
+
+<html>
+
+   <head>
+   
+      <title>
+         Volleyball Animation
+      </title>
+      
+   </head>
+   
+   <body bgcolor = "#A8C4E1">
+	<p align=center><font size=+2>
+			<strong> Volleyball Animation
+			<br>
+			Yuliya Levitskaya
+			<br>
+			CPE471
+			<br>
+			Winter 2014</strong>
+		</font></p>
+	
+ <img border="0" src="playing.jpg" style="float: left;" height="300" width="400" Hspace="20">  
+      <a name="Introduction">
+         <h3>
+            Introduction
+         </h3>
+      </a>
+      
+      <p>
+        The Volleyball Animation project was an experiment in modeling and animation.  
+	It was written using C++ and Microsoft Visual Studio 2013 for Professor Wood's 
+	CSC 471: Intro to Computer Graphics class at Cal Poly, San Luis Obispo. 
+	Collaboration with an ART 384 student was conducted to build the models. 
+	Further information about the project is organized as follows:
+      </p>  
+      <h3><a name="User Instructions"></a> User Instructions</h3>
+	<h4> Camera Movement</h4>
+		<p> The camera is capable of zooming, strafing and rotating.
+		 Camera movement is achieved as follows:</p>
+		<ul>
+			<li><b>Strafing via 'A' and 'S'.</b> Pressing 'A' will 
+			strafe the camera to the left, while pressing 'S' will strafe the 
+			camera to the right.</li>
+			<li><b>Zooming via 'W' and 'S'.&nbsp; </b>Pressing 'W' will zoom the camera 
+			in, pressing 'S' will zoom it out.</li>
+			<li><b>Mouse rotation.</b> Clicking and draging the mouse controls the pitch and yaw.
+			The program restricts the user to look straight up or straight down.</li>
+		</ul>
+<div ><img border="0" src="player2.jpg"style = "float:right;">
+      <a name="Modeling">
+         <h3>
+            Modeling
+         </h3>
+      </a>
+ 	<p>
+         Both volleyball players are fully hierarchical, and are laid out as follows:
+	<ul>
+  	   <li>Volleyball Player</li>
+	   <ul>
+	      <li type="square">Head</li>
+	      <ul>
+	         <li type="square">Torso</li>
+	         <ul>
+	            <li type="square">Arms (2)</li>
+		    <ul>
+		       <li type="circle">Upper Arm</li>
+		       <li type="circle">Hand</li>
+		    </ul>
+		    <li type="square">Legs (2)</li>
+		    <ul>
+		       <li type="circle">Thigh</li>
+		       <li type="circle">Foot</li>
+		    </ul>
+	         </ul>
+	      </ul>
+	   </ul>
+	</ul>
+
+	All this hierarchy allows for easy modeling since a rotation, scaling or translation applied
+	to any one object is then also applied appropriately to its children object. 
+	</p>  
+</div>
+	<img border="0" src="player.jpg" style="float: left"; height="300" width="400">
+<br>
+<br>
+<br>
+<br>
+	<a name="Animation">
+         <h3>
+           Animation
+         </h3>
+      </a>
+ 	<p>
+	All animations were done using a timer function. A parabolic equation was used for the 
+	path of the ball. When the ball reaches the top, the player to who the ball is flying 
+	to will start moving to the apropriate volleyball stance. Once the player hits the ball 
+	and it starts flying away, the player moves to the origional standing position while the 
+	other player gets ready for the ball. There are a total of 6 set trajectories that the ball 
+	follows and the appropriate player moves in the direction of the ball.
+	</p>
+<br>
+<br>
+<br>
+
+
+	<a name="Other Graphics Concepts">
+         <h3>
+            Other Graphics Concepts
+         </h3>
+      </a>
+	<h4> Lighting</h4>
+ 	<p>
+	One directional light was used for the Volleyball Animation project. 
+	The directional light was stationary and can be seen when either the ball 
+	or the players move.
+	</p>
+	<h4>Materials</h4>
+	<p>
+	Five custom materials were created to finish the project: a shiny blue, 
+	a shiney off-white, a shiney green, plastic gray, and a plastic white. The 
+	combination of reflective attributes of these materials, mixed with the 
+	light created for the scene, allow for a reflection appropriate for each 
+	object. While the player's skin was off-white, the shiney blue was used 
+	for their jerseys, and the gray for their shorts. The green was used for
+	the court and the white for the ball.
+	</p>
+
+<img border="0" src="ball.jpg" style="float: right" Hspace = "20">
+ 	<a name="References">
+         <h3>
+            Resources Used:
+         </h3>
+      </a>
+ 	<p>All functionality used in the program comes from in-class lectures.</p>
+	<p>The player model was created by Allison O'Neill from ART 384.</p>
+	<p>The volleyball model was downloaded from turbosquid.com</p>
+      <br>
+      <br>
+      <br>
+   </body>
+</html>
